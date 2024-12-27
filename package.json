@@ -1,0 +1,10 @@
+{
+  "name": "portfolio_molid_nourawaleh",
+  "version": "1.0.0",
+  "description": "README.md index.html script.js",
+  "main": "script.js",
+  "scripts": {
+  },
+  "author": "",
+  "license": "ISC"
+}
