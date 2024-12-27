@@ -544,7 +544,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
 img,
 video {
-  max-width: 100%;
+  width: 30%;
   height: auto;
 }
 
@@ -799,14 +799,14 @@ video {
 }
 
 .border {
-  border-width: 1px;
+  border-width: 10px;
 }
 
 .border-hidden {
   border-style: hidden;
 }
 
-.border-black {
+.border-white {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity, 1));
 }
