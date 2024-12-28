@@ -11,6 +11,9 @@ module.exports = {
       fontFamily: {
         sans: ['"DM Sans"', 'sans-serif'], // Ajoutez DM Sans comme police principale
       },
+      imgpetit: {
+        width: '3%',
+      }
     },
     },
   plugins: [],
