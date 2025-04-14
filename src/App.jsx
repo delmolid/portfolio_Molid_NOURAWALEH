@@ -7,7 +7,7 @@ import Profile from './components/Profile'
 function App() {
   return (
     <div>
-      <Welcome />
+     
       <Header/>
       <Profile/>
       <Portfolio/>
