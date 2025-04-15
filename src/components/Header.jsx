@@ -21,16 +21,6 @@ class Header extends React.Component {
                                 Expériences
                             </a>
                         </li>
-                        <li>
-                            <a href="aboutme.html" className="text-gray-800 hover:text-blue-600 font-medium">
-                                CV
-                            </a>
-                        </li>
-                        <li>
-                            <a href="contact.html" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                                Contact
-                            </a>
-                        </li>
                     </ul>
                 </nav>
             </header>

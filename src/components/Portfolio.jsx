@@ -6,7 +6,7 @@ class Portfolio extends React.Component {
             {
                 title: "Portfolio",
                 description: "Mon portfolio personnel créé avec React et Tailwind CSS",
-                image: "https://raw.githubusercontent.com/delmolid/portfolio_Molid_NOURAWALEH/main/output.webp",
+                image: "https://github.com/delmolid/portfolio_Molid_NOURAWALEH/blob/main/assets/image_portfolio.png?raw=true",
                 link: "https://portfolio-molid-nourawaleh.vercel.app",
                 technologies: ["React", "Tailwind CSS", "JavaScript"]
             },
@@ -32,12 +32,13 @@ class Portfolio extends React.Component {
                 { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
                 { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
                 { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-                { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" }
+                { name: "Tailwind CSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-wordmark.svg" }
             ],
             backend: [
                 { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
                 { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-                { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" }
+                { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+                { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" }
             ],
             database: [
                 { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
