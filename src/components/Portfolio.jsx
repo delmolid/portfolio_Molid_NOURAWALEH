@@ -12,14 +12,14 @@ class Portfolio extends React.Component {
             },
             {
                 title: "Coffee Menu",
-                description: "Une application de menu de café interactive",
+                description: "Une application interactive de menu pour café",
                 image: "https://raw.githubusercontent.com/delmolid/Coffee-Menu/refs/heads/main/output.webp",
                 link: "https://github.com/delmolid/Coffee-Menu.git",
                 technologies: ["HTML", "CSS", "JavaScript"]
             },
             {
                 title: "Quiz Géographique",
-                description: "Un quiz interactif sur la géographie",
+                description: "Un quiz interactif sur la géographie mondiale",
                 image: "https://raw.githubusercontent.com/delmolid/portfolio_Molid_NOURAWALEH/refs/heads/main/output.webp",
                 link: "https://delmolid.github.io/projet-collectif-nantes-quizz-geo-quizzzz/accueil.html",
                 technologies: ["HTML", "CSS", "JavaScript"]

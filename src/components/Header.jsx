@@ -11,16 +11,6 @@ class Header extends React.Component {
                                 Accueil
                             </a>
                         </li>
-                        <li>
-                            <a href="formation.html" className="text-gray-800 hover:text-blue-600 font-medium">
-                                Formations
-                            </a>
-                        </li>
-                        <li>
-                            <a href="experience.html" className="text-gray-800 hover:text-blue-600 font-medium">
-                                Expériences
-                            </a>
-                        </li>
                     </ul>
                 </nav>
             </header>

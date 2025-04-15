@@ -34,12 +34,12 @@ class Profile extends React.Component {
                             <div className="md:w-1/2 mb-8 md:mb-0">
                                 <h2 className="text-4xl font-bold mb-6">À propos de moi</h2>
                                 <p className="text-lg text-gray-600 mb-6">
-                                    Fort de quatre années d'expérience en biologie santé, j'ai entrepris une 
+                                    Fort de quatre années d'expérience en biologie-santé, j'ai entrepris une 
                                     reconversion vers le développement d'applications, un domaine qui me passionne 
-                                    et qui correspond à ma curiosité pour le développement des applications.
+                                    et qui correspond à ma curiosité pour l'innovation technologique.
                                 </p>
                                 <p className="text-lg text-gray-600 mb-6">
-                                    Je suis actuellement en quête d'une alternance d'un an dès juin 2024, 
+                                    Je suis actuellement à la recherche d'une alternance d'un an à partir de juin 2024, 
                                     en contrat de professionnalisation (4 jours en entreprise et 1 jour en formation).
                                 </p>
                                 <div className="flex space-x-4">

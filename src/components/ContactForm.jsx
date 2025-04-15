@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
 
                             <form onSubmit={this.handleSubmit} className="p-6">
                                 <div className="mb-4">
-                                    <label htmlFor="name" className="block text-gray-700 mb-2">Nom</label>
+                                    <label htmlFor="name" className="block text-gray-700 mb-2">Nom complet</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -99,7 +99,7 @@ class ContactForm extends React.Component {
                                 </div>
 
                                 <div className="mb-4">
-                                    <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                                    <label htmlFor="email" className="block text-gray-700 mb-2">Adresse e-mail</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -112,7 +112,7 @@ class ContactForm extends React.Component {
                                 </div>
 
                                 <div className="mb-6">
-                                    <label htmlFor="message" className="block text-gray-700 mb-2">Message</label>
+                                    <label htmlFor="message" className="block text-gray-700 mb-2">Votre message</label>
                                     <textarea
                                         id="message"
                                         name="message"
