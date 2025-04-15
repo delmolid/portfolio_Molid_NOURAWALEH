@@ -7,7 +7,7 @@ class Portfolio extends React.Component {
                 title: "Portfolio",
                 description: "Mon portfolio personnel créé avec React et Tailwind CSS",
                 image: "https://raw.githubusercontent.com/delmolid/portfolio_Molid_NOURAWALEH/main/output.webp",
-                link: "https://delmolid.github.io",
+                link: "https://portfolio-molid-nourawaleh.vercel.app",
                 technologies: ["React", "Tailwind CSS", "JavaScript"]
             },
             {
