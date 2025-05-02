@@ -3,18 +3,11 @@ import React from 'react';
 class Portfolio extends React.Component {
     render() {
         const projects = [
-            { 
-                title : "Application Mobile : SurfBuddy",
-                description: "Développement d'une application Mobile avec REACT NATIVE et PHP/Symfony",
-                image: "/Users/khadiraomarhadji/Desktop/Applications ADA /portfolio_Molid_NOURAWALEH/assets/undraw_building-a-website_1wrp.png",
-                link: "https://github.com/adatechschool/SurfBuddy_Front.git",
-                technologies: ["React Native", "PHP", "Symfony", "TypeScript", "CSS3", "HTML5"]
-            },
             {
                 title : "Développement d'une application fullstack avec Angular et JAVA (SpringBoot) : Bon_Appétit.fr",
                 description: "Une application web moderne pour la gestion de menus de restaurant, construite avec Angular et Spring Boot.",
-                image: "https://github.com/adatechschool/Bon_Appétit_Front.git",
-                link: "https://github.com/adatechschool/Bon_Appétit_Front.git",
+                image: "https://raw.githubusercontent.com/delmolid/bon_appetit.fr/refs/heads/main/Image%2001-04-2025%20à%2017.49.jpg",
+                link: "https://github.com/delmolid/bon_appetit.fr.git",
                 technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5"]
             },
             {
