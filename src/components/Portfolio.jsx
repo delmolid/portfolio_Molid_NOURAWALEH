@@ -3,7 +3,49 @@ import React from 'react';
 class Portfolio extends React.Component {
     render() {
         const projects = [
+            { 
+                title : "Application Mobile : SurfBuddy",
+                description: "Développement d'une application Mobile avec REACT NATIVE et PHP/Symfony",
+                image: "/Users/khadiraomarhadji/Desktop/Applications ADA /portfolio_Molid_NOURAWALEH/assets/undraw_building-a-website_1wrp.png",
+                link: "https://github.com/adatechschool/SurfBuddy_Front.git",
+                technologies: ["React Native", "PHP", "Symfony", "TypeScript", "CSS3", "HTML5"]
+            },
             {
+                title : "Développement d'une application fullstack avec Angular et JAVA (SpringBoot) : Bon_Appétit.fr",
+                description: "Une application web moderne pour la gestion de menus de restaurant, construite avec Angular et Spring Boot.",
+                image: "https://github.com/adatechschool/Bon_Appétit_Front.git",
+                link: "https://github.com/adatechschool/Bon_Appétit_Front.git",
+                technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5"]
+            },
+            {
+                title : "Développement d'une application fullstack avec React et JAVA (SpringBoot) : Hello_Ada",
+                description: "Développement d'une application de microblogging destinée aux apprenant·es d’Ada Tech School",
+                image: "https://github.com/adatechschool/Hello_Ada_Front.git",
+                link: "https://github.com/adatechschool/Hello_Ada_Front.git",
+                technologies: ["React", "JAVA", "SpringBoot", "JavaScript", "CSS3", "HTML5"]
+            },
+            {
+                title : "Application fullstack : LUXURY CAMPS",
+                description: "Développement d'une application fullstack avec React et JAVA (SpringBoot)",   
+                image: "https://github.com/delmolid/luxury_camps.git",
+                link: "https://github.com/delmolid/luxury_camps.git",
+                technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5"]
+            },
+            {
+                title : "Développement d'une application Back-office avec PHP",
+                description: "Ce back-office a été développé pour répondre à 4 besoins principaux :- 👥 **Gestion des bénévoles** : Suivi des participants et de leurs rôle- 📝 **Enregistrement des collectes** : Documentation des actions de nettoyage- 🗑️ **Suivi des déchets** : Classification et quantification des déchets collectés",
+                image: "https://github.com/adatechschool/Littoral_Propre_Back.git",
+                link: "https://github.com/delmolid/Back_Office_Littoral_Propre.git",
+                technologies: ["PHP", "CSS3", "HTML5"]
+            }, 
+            {
+                title : "Développement d'une calculatrice avec HTML, Bootstrap et JavaScript",
+                description: "Une application de calculatrice simple avec HTML, Bootstrap et JavaScript",
+                image: "https://github.com/delmolid/Calculatrice/blob/refs/heads/main/assets/image_calculatrice.png?raw=true",
+                link: "https://github.com/delmolid/calculatrice_graphiqueJS.git",
+                technologies: ["HTML", "Bootstrap", "JavaScript"]
+            },
+            {    
                 title: "Portfolio",
                 description: "Mon portfolio personnel créé avec React et Tailwind CSS",
                 image: "https://github.com/delmolid/portfolio_Molid_NOURAWALEH/blob/main/assets/image_portfolio.png?raw=true",
@@ -18,11 +60,11 @@ class Portfolio extends React.Component {
                 technologies: ["HTML", "CSS", "JavaScript"]
             },
             {
-                title: "Quiz Géographique",
-                description: "Un quiz interactif sur la géographie mondiale",
+                title: "Quiz Histoire/Géographique",
+                description: "Un quiz interactif sur l'histoire et la géographie en France",
                 image: "https://raw.githubusercontent.com/delmolid/portfolio_Molid_NOURAWALEH/refs/heads/main/output.webp",
                 link: "https://delmolid.github.io/projet-collectif-nantes-quizz-geo-quizzzz/accueil.html",
-                technologies: ["HTML", "CSS", "JavaScript"]
+                technologies: ["HTML5", "CSS3", "JavaScript"]
             }
         ];
 
