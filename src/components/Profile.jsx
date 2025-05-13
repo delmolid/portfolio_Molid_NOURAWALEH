@@ -13,7 +13,7 @@ class Profile extends React.Component {
         // Créer un élément <a> temporaire
         const link = document.createElement('a');
         link.href = cvPath;
-        link.download = 'CV_MolidNOURAWALEH.pdf'; // Nom du fichier lors du téléchargement
+        link.download = 'CV_MolidNOURAWALEH_AlternanceADA.pdf'; // Nom du fichier lors du téléchargement
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
