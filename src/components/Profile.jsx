@@ -94,7 +94,7 @@ class Profile extends React.Component {
                             </div>
                             <div className="flex-1 p-4">
                                 <iframe
-                                    src="/CV_MolidNOURAWALEH_ENI.pdf"
+                                    src="/CV_MolidNOURAWALEH_AlternanceADA.pdf"
                                     className="w-full h-full rounded-lg"
                                     title="CV Preview"
                                 />
