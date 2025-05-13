@@ -8,7 +8,7 @@ class Profile extends React.Component {
 
     handleDownloadCV = () => {
         // Chemin vers votre fichier CV dans le dossier public
-        const cvPath = '/CV_MolidNOURAWALEH_ENI.pdf';
+        const cvPath = '/CV_MolidNOURAWALEH_AlternanceADA.pdf';
         
         // Créer un élément <a> temporaire
         const link = document.createElement('a');
