@@ -1,4 +1,8 @@
 import React from 'react';
+import { DataView } from 'primereact/dataview';
+import { Button } from 'primereact/button';
+import { Tag } from 'primereact/tag';
+import { Card } from 'primereact/card';
 
 class Portfolio extends React.Component {
     render() {
@@ -12,7 +16,7 @@ class Portfolio extends React.Component {
             },
             {
                 title : "Développement d'une application fullstack avec React et JAVA (SpringBoot) : Hello_Ada",
-                description: "Développement d'une application de microblogging destinée aux apprenant·es d’Ada Tech School",
+                description: "Développement d'une application de microblogging destinée aux apprenant·es d'Ada Tech School",
                 image: "https://github.com/adatechschool/Hello_Ada_Front.git",
                 link: "https://github.com/adatechschool/Hello_Ada_Front.git",
                 technologies: ["React", "JAVA", "SpringBoot", "JavaScript", "CSS3", "HTML5"]
@@ -67,12 +71,14 @@ class Portfolio extends React.Component {
                 { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
                 { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
                 { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
                 { name: "Tailwind CSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-wordmark.svg" }
             ],
             backend: [
                 { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
                 { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
                 { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+                { name: "Symfony", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" },
                 { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" }
             ],
             database: [
@@ -85,6 +91,42 @@ class Portfolio extends React.Component {
                 { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
                 { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
             ]
+        };
+
+        const itemTemplate = (project) => {
+            return (
+                <div className="col-12 md:col-6 lg:col-4 p-3">
+                    <Card className="h-full shadow-4 hover:shadow-8 transition-all duration-200">
+                        <div className="flex flex-column h-full">
+                            <div className="relative">
+                                <img 
+                                    src={project.image} 
+                                    alt={project.title}
+                                    className="w-full h-48 object-cover rounded-t-lg"
+                                    onError={(e) => e.target.src='https://www.primefaces.org/wp-content/uploads/2020/05/placeholder.png'}
+                                />
+                            </div>
+                            <div className="flex-1 flex flex-column p-4">
+                                <h3 className="text-xl font-bold mb-3 line-clamp-2">{project.title}</h3>
+                                <p className="text-gray-600 mb-4 line-clamp-3">{project.description}</p>
+                                <div className="flex flex-wrap gap-2 mb-4">
+                                    {project.technologies.map((tech, i) => (
+                                        <Tag key={i} value={tech} severity="info" />
+                                    ))}
+                                </div>
+                                <div className="mt-auto">
+                                    <Button 
+                                        label="Voir le projet" 
+                                        icon="pi pi-external-link" 
+                                        className="p-button-rounded p-button-outlined"
+                                        onClick={() => window.open(project.link, '_blank')}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </Card>
+                </div>
+            );
         };
 
         return (
@@ -173,36 +215,16 @@ class Portfolio extends React.Component {
                 <section id="projects" className="py-20 bg-white">
                     <div className="container mx-auto px-6">
                         <h2 className="text-4xl font-bold mb-12 text-center">Mes Projets</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {projects.map((project, index) => (
-                                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                                    <img 
-                                        src={project.image} 
-                                        alt={project.title}
-                                        className="w-full h-48 object-cover"
-                                    />
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                                        <p className="text-gray-600 mb-4">{project.description}</p>
-                                        <div className="flex flex-wrap gap-2 mb-4">
-                                            {project.technologies.map((tech, i) => (
-                                                <span key={i} className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
-                                                    {tech}
-                                                </span>
-                                            ))}
-                                        </div>
-                                        <a 
-                                            href={project.link}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-                                        >
-                                            Voir le projet
-                                        </a>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                        <DataView 
+                            value={projects} 
+                            layout="grid" 
+                            itemTemplate={itemTemplate} 
+                            paginator 
+                            rows={6}
+                            paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink"
+                            emptyMessage="Aucun projet trouvé"
+                        />
+                        <div className="text-center mt-8"></div>
                     </div>
                 </section>
             </div>

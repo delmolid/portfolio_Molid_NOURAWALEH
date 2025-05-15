@@ -1,20 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
+import { InputText } from 'primereact/inputtext';
+import { InputTextarea } from 'primereact/inputtextarea';
+import { ContactContext } from '../context/ContactContext';
 
 class ContactForm extends React.Component {
+    static contextType = ContactContext;
+
     state = {
-        isOpen: false,
         name: '',
         email: '',
         message: '',
         isSubmitting: false,
         submitStatus: null
-    };
-
-    toggleModal = () => {
-        this.setState(prevState => ({
-            isOpen: !prevState.isOpen,
-            submitStatus: null
-        }));
     };
 
     handleSubmit = async (e) => {
@@ -41,6 +40,12 @@ class ContactForm extends React.Component {
                     email: '',
                     message: ''
                 });
+                
+                // Fermer le formulaire après 2 secondes en cas de succès
+                setTimeout(() => {
+                    this.context.closeContactForm();
+                    this.setState({ submitStatus: null });
+                }, 2000);
             } else {
                 this.setState({ submitStatus: 'error' });
             }
@@ -57,97 +62,93 @@ class ContactForm extends React.Component {
         });
     };
 
+    renderFooter() {
+        return (
+            <div>
+                <Button 
+                    label="Annuler" 
+                    icon="pi pi-times" 
+                    onClick={() => this.context.closeContactForm()} 
+                    className="p-button-text" 
+                />
+                <Button 
+                    label={this.state.isSubmitting ? 'Envoi en cours...' : 'Envoyer'} 
+                    icon="pi pi-send" 
+                    onClick={this.handleSubmit} 
+                    disabled={this.state.isSubmitting}
+                    autoFocus 
+                />
+            </div>
+        );
+    }
+
     render() {
-        const { isOpen, isSubmitting, submitStatus } = this.state;
+        const { isContactFormOpen, closeContactForm } = this.context;
+        const { isSubmitting, submitStatus } = this.state;
 
         return (
-            <>
-                <button
-                    onClick={this.toggleModal}
-                    className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50"
-                >
-                    Me contacter
-                </button>
-
-                {isOpen && (
-                    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-                        <div className="bg-white rounded-lg w-full max-w-md">
-                            <div className="p-4 border-b flex justify-between items-center">
-                                <h3 className="text-xl font-semibold">Me contacter</h3>
-                                <button 
-                                    onClick={this.toggleModal}
-                                    className="text-gray-500 hover:text-gray-700"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </button>
+            <Dialog 
+                header="Me contacter" 
+                visible={isContactFormOpen} 
+                style={{ width: '50vw' }} 
+                onHide={closeContactForm}
+                footer={this.renderFooter()}
+            >
+                <div className="p-fluid">
+                    {submitStatus === 'success' && (
+                        <div className="p-message p-message-success mb-4">
+                            <div className="p-message-wrapper">
+                                <span className="p-message-icon pi pi-check"></span>
+                                <span className="p-message-text">Message envoyé avec succès !</span>
                             </div>
-
-                            <form onSubmit={this.handleSubmit} className="p-6">
-                                <div className="mb-4">
-                                    <label htmlFor="name" className="block text-gray-700 mb-2">Nom complet</label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={this.state.name}
-                                        onChange={this.handleChange}
-                                        className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        required
-                                    />
-                                </div>
-
-                                <div className="mb-4">
-                                    <label htmlFor="email" className="block text-gray-700 mb-2">Adresse e-mail</label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={this.state.email}
-                                        onChange={this.handleChange}
-                                        className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        required
-                                    />
-                                </div>
-
-                                <div className="mb-6">
-                                    <label htmlFor="message" className="block text-gray-700 mb-2">Votre message</label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        value={this.state.message}
-                                        onChange={this.handleChange}
-                                        rows="4"
-                                        className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                        required
-                                    />
-                                </div>
-
-                                {submitStatus === 'success' && (
-                                    <div className="mb-4 p-3 bg-green-100 text-green-700 rounded-lg">
-                                        Message envoyé avec succès !
-                                    </div>
-                                )}
-
-                                {submitStatus === 'error' && (
-                                    <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-lg">
-                                        Une erreur est survenue. Veuillez réessayer.
-                                    </div>
-                                )}
-
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className={`w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-                                >
-                                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
-                                </button>
-                            </form>
                         </div>
+                    )}
+
+                    {submitStatus === 'error' && (
+                        <div className="p-message p-message-error mb-4">
+                            <div className="p-message-wrapper">
+                                <span className="p-message-icon pi pi-times"></span>
+                                <span className="p-message-text">Une erreur est survenue. Veuillez réessayer.</span>
+                            </div>
+                        </div>
+                    )}
+
+                    <div className="p-field mb-4">
+                        <label htmlFor="name" className="font-bold mb-2 block ">Nom complet</label>
+                        <InputText className="border-2 border-gray-300 rounded-md p-2"
+                            id="name"
+                            name="name"
+                            value={this.state.name}
+                            onChange={this.handleChange}
+                            required
+                        />
                     </div>
-                )}
-            </>
+
+                    <div className="p-field mb-4">
+                        <label htmlFor="email" className="font-bold mb-2 block  border-gray-300 rounded-md p-2 ">Adresse e-mail</label>
+                        <InputText className="border-2 border-gray-300 rounded-md p-2"
+                            id="email"
+                            name="email"
+                            type="email"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                            required
+                        />
+                    </div>
+
+                    <div className="p-field mb-4">
+                        <label htmlFor="message" className="font-bold mb-2 block">Votre message</label>
+                        <InputTextarea className="border-2 border-gray-300 rounded-md p-2"
+                            id="message"
+                            name="message"
+                            value={this.state.message}
+                            onChange={this.handleChange}
+                            rows={5}
+                            required
+                        />
+                    </div>
+                </div>
+            </Dialog>
         );
     }
 }
