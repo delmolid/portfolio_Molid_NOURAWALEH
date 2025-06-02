@@ -8,6 +8,29 @@ class Portfolio extends React.Component {
     render() {
         const projects = [
             {
+                title : "Application Full Stack de recherche d’emploi : CollabHub",
+                description: "Développement d'une application fullstack avec Angular et JAVA (SpringBoot)",
+                image: "https://github.com/delmolid/CollabHub.git",
+                link: "https://github.com/delmolid/CollabHub.git",
+                technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5", "PostgreSQL", "Figma"]
+            },
+
+            {
+                title : "Application Mobile Hybride Full Stack : SurfBuddy (Projet Front-end)", 
+                description: "Développement d'une application mobile hybride avec React Native et JAVA (SpringBoot)",
+                image: "https://docs.google.com/presentation/d/1QjeajbYSJTt7L5C6X1aoGcLqb4zUs5LBwIKhS-NB_vc/edit?slide=id.g5e50b92b62_0_2620#slide=id.g5e50b92b62_0_2620",
+                link: "https://github.com/delmolid/SurfBuddy_Front.git",
+                technologies: ["React Native", "Expo", "TypeScript", "Figma", "CSS3", "HTML5"]
+            },
+            {
+                title : "Application Mobile Hybride Full Stack : SurfBuddy (Projet Back-end)",
+                description: "Développement d'une application mobile hybride avec React Native et JAVA (SpringBoot)",
+                image: "https://docs.google.com/presentation/d/1QjeajbYSJTt7L5C6X1aoGcLqb4zUs5LBwIKhS-NB_vc/edit?slide=id.g5e50b92b62_0_2620#slide=id.g5e50b92b62_0_2620",
+                link: "https://github.com/delmolid/SurfBuddy_Back.git",
+                technologies: ["PostgreSQL", "PHP 8.3", "Symfony 7.2", "MySQL", "Doctrine"]
+            },
+
+            {
                 title : "Développement d'une application fullstack avec Angular et JAVA (SpringBoot) : Bon_Appétit.fr",
                 description: "Une application web moderne pour la gestion de menus de restaurant, construite avec Angular et Spring Boot.",
                 image: "https://raw.githubusercontent.com/delmolid/bon_appetit.fr/refs/heads/main/Image%2001-04-2025%20à%2017.49.jpg",
@@ -18,7 +41,7 @@ class Portfolio extends React.Component {
                 title : "Développement d'une application fullstack avec React et JAVA (SpringBoot) : Hello_Ada",
                 description: "Développement d'une application de microblogging destinée aux apprenant·es d'Ada Tech School",
                 image: "https://github.com/adatechschool/Hello_Ada_Front.git",
-                link: "https://github.com/adatechschool/Hello_Ada_Front.git",
+                link: "https://github.com/delmolid/Hello_Ada_front.git",
                 technologies: ["React", "JAVA", "SpringBoot", "JavaScript", "CSS3", "HTML5"]
             },
             {
@@ -79,7 +102,8 @@ class Portfolio extends React.Component {
                 { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
                 { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
                 { name: "Symfony", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" },
-                { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" }
+                { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
+                { name: "JAVA", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" }
             ],
             database: [
                 { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
