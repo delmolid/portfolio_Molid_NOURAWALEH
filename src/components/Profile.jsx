@@ -111,7 +111,7 @@ class Profile extends React.Component {
                     }
                 >
                     <iframe
-                        src="/CV_MolidNOURAWALEH_AlternanceADA.pdf"
+                        src="/CV_MolidNOURAWALEH_AlternanceCDA.pdf"
                         className="w-full"
                         style={{ height: '70vh' }}
                         title="CV Preview"

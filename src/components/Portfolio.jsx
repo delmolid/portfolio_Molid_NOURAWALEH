@@ -17,14 +17,14 @@ class Portfolio extends React.Component {
 
             {
                 title : "Application Mobile Hybride Full Stack : SurfBuddy (Projet Front-end)", 
-                description: "Développement d'une application mobile hybride avec React Native et JAVA (SpringBoot)",
+                description: "Développement d'une application mobile hybride avec React Native et PHP (Symfony 7.2)",
                 image: "https://docs.google.com/presentation/d/1QjeajbYSJTt7L5C6X1aoGcLqb4zUs5LBwIKhS-NB_vc/edit?slide=id.g5e50b92b62_0_2620#slide=id.g5e50b92b62_0_2620",
                 link: "https://github.com/delmolid/SurfBuddy_Front.git",
                 technologies: ["React Native", "Expo", "TypeScript", "Figma", "CSS3", "HTML5"]
             },
             {
                 title : "Application Mobile Hybride Full Stack : SurfBuddy (Projet Back-end)",
-                description: "Développement d'une application mobile hybride avec React Native et JAVA (SpringBoot)",
+                description: "Développement d'une application mobile hybride avec React Native et PHP (Symfony 7.2)",
                 image: "https://docs.google.com/presentation/d/1QjeajbYSJTt7L5C6X1aoGcLqb4zUs5LBwIKhS-NB_vc/edit?slide=id.g5e50b92b62_0_2620#slide=id.g5e50b92b62_0_2620",
                 link: "https://github.com/delmolid/SurfBuddy_Back.git",
                 technologies: ["PostgreSQL", "PHP 8.3", "Symfony 7.2", "MySQL", "Doctrine"]
