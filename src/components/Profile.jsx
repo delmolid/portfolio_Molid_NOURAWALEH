@@ -12,10 +12,10 @@ class Profile extends React.Component {
     };
 
     handleDownloadCV = () => {
-        const cvPath = '/CV_MolidNOURAWALEH_AlternanceADA.pdf';
+        const cvPath = '/CV_MolidNOURAWALEH_AlternanceCDA.pdf';
         const link = document.createElement('a');
         link.href = cvPath;
-        link.download = 'CV_MolidNOURAWALEH_AlternanceADA.pdf';
+        link.download = 'CV_MolidNOURAWALEH_AlternanceCDA.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
