@@ -113,7 +113,7 @@ const Profile = () => {
                 }
             >
                 <iframe
-                    src="https://github.com/delmolid/portfolio_Molid_NOURAWALEH/blob/dev/public/CV_MolidNourAwaleh_v4.2.pdf"
+                    src="https://github.com/delmolid/portfolio_Molid_NOURAWALEH/blob/dev/public/CV_MolidNourAwaleh_v4.3.pdf"
                     className="w-full"
                     style={{ height: '70vh' }}
                     title="CV Preview"
