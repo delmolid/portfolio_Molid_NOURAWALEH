@@ -61,8 +61,11 @@ const Profile = () => {
                                     </div>
                                 </div>
                                 <p className="m-0">
-                                    Fort de cinq années d'expérience en biologie-santé, j'ai entrepris une
-                                    reconversion vers le développement d'applications, un domaine qui me passionne.
+                                    Développeur issu d'une reconversion, j'ai choisi le développement pour ce qu'il a 
+                                    de concret : comprendre un besoin ou analyser un problème, trouver une solution et 
+                                    la mettre en œuvre. Je recherche un CDI à partir de septembre 2026 dans une équipe 
+                                    où je pourrai continuer à progresser et contribuer concrètement, aussi bien en 
+                                    développement qu'en projet et en maintenance applicative.
                                 </p>
                                 <p className="mt-3">
                                     Je suis actuellement à la recherche d'une nouvelle opportunité professionnelle
