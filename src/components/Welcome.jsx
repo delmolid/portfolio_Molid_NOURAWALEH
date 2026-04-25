@@ -9,7 +9,7 @@ class Welcome extends React.Component {
             Portfolio
           </h1>
           <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-            Développeur Web Junior passionné par la création d'applications web modernes et intuitives
+            Concepteur et Développeur d'applications passionné par la création d'applications robustes et sécurisées
           </p>
           <div className="flex justify-center space-x-6">
             <a href="#projects" className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700">
