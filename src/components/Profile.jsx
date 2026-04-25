@@ -9,10 +9,10 @@ const Profile = () => {
     const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
     const handleDownloadCV = () => {
-        const cvPath = '/CV_MolidNourAwaleh_v4.2.pdf';
+        const cvPath = '/CV_MolidNourAwaleh_v4.3.pdf';
         const link = document.createElement('a');
         link.href = cvPath;
-        link.download = 'CV_MolidNourAwaleh_v4.2.pdf';
+        link.download = 'CV_MolidNourAwaleh_v4.3.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
