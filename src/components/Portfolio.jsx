@@ -7,14 +7,20 @@ import { Card } from 'primereact/card';
 class Portfolio extends React.Component {
     render() {
         const projects = [
+             {
+                title : "Application web d'échange de compétences : TrocSkill-hub",
+                description: "Projet de fin d'études RNCP VI : Application web d'échange de compétences entre particuliers.",
+                image: "https://github.com/delmolid/TrocSkillHub_Front-end",
+                link: "https://github.com/delmolid/TrocSkillHub_Front-end",
+                technologies: ["React", "TypeScript", "JAVA", "SpringBoot", "PostgreSQL", "Figma"]
+            },
             {
-                title : "Application Full Stack de recherche d’emploi : CollabHub",
-                description: "Développement d'une application fullstack avec Angular et JAVA (SpringBoot)",
+                title : "Application Full Stack de recherche d'emploi : CollabHub",
+                description: "Portfolio et application de recherche d'emploi développés en Golang/Echo et Java/Spring Boot.",
                 image: "https://github.com/delmolid/CollabHub.git",
                 link: "https://github.com/delmolid/CollabHub.git",
-                technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5", "PostgreSQL", "Figma"]
+                technologies: ["Golang", "Echo", "JAVA", "SpringBoot", "PostgreSQL", "Figma"]
             },
-
             {
                 title : "Application Mobile Hybride Full Stack : SurfBuddy (Projet Front-end)", 
                 description: "Développement d'une application mobile hybride avec React Native et PHP (Symfony 7.2)",
@@ -29,16 +35,15 @@ class Portfolio extends React.Component {
                 link: "https://github.com/delmolid/SurfBuddy_Back.git",
                 technologies: ["PostgreSQL", "PHP 8.3", "Symfony 7.2", "MySQL", "Doctrine"]
             },
-
             {
-                title : "Développement d'une application fullstack avec Angular et JAVA (SpringBoot) : Bon_Appétit.fr",
+                title : "Gestion de menus de restaurant : Bon_Appétit.fr",
                 description: "Une application web moderne pour la gestion de menus de restaurant, construite avec Angular et Spring Boot.",
                 image: "https://raw.githubusercontent.com/delmolid/bon_appetit.fr/refs/heads/main/Image%2001-04-2025%20à%2017.49.jpg",
                 link: "https://github.com/delmolid/bon_appetit.fr.git",
                 technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5"]
             },
             {
-                title : "Développement d'une application fullstack avec React et JAVA (SpringBoot) : Hello_Ada",
+                title : "Application de microblogging : Hello_Ada",
                 description: "Développement d'une application de microblogging destinée aux apprenant·es d'Ada Tech School",
                 image: "https://github.com/adatechschool/Hello_Ada_Front.git",
                 link: "https://github.com/delmolid/Hello_Ada_front.git",
@@ -52,18 +57,18 @@ class Portfolio extends React.Component {
                 technologies: ["Angular", "JAVA", "SpringBoot", "TypeScript", "CSS3", "HTML5"]
             },
             {
-                title : "Développement d'une application Back-office avec PHP",
-                description: "Ce back-office a été développé pour répondre à 4 besoins principaux :- 👥 **Gestion des bénévoles** : Suivi des participants et de leurs rôle- 📝 **Enregistrement des collectes** : Documentation des actions de nettoyage- 🗑️ **Suivi des déchets** : Classification et quantification des déchets collectés",
+                title : "Back-office : Littoral Propre",
+                description: "Back-office pour la gestion des bénévoles, l'enregistrement des collectes et le suivi des déchets.",
                 image: "https://github.com/adatechschool/Littoral_Propre_Back.git",
                 link: "https://github.com/delmolid/Back_Office_Littoral_Propre.git",
                 technologies: ["PHP", "CSS3", "HTML5"]
             }, 
             {
-                title : "Développement d'une calculatrice avec HTML, Bootstrap et JavaScript",
+                title : "Calculatrice graphique",
                 description: "Une application de calculatrice simple avec HTML, Bootstrap et JavaScript",
                 image: "https://github.com/delmolid/Calculatrice/blob/refs/heads/main/assets/image_calculatrice.png?raw=true",
                 link: "https://github.com/delmolid/calculatrice_graphiqueJS.git",
-                technologies: ["HTML", "Bootstrap", "JavaScript"]
+                technologies: ["HTML5", "Bootstrap", "JavaScript"]
             },
             {    
                 title: "Portfolio",
@@ -77,7 +82,7 @@ class Portfolio extends React.Component {
                 description: "Une application interactive de menu pour café",
                 image: "https://raw.githubusercontent.com/delmolid/Coffee-Menu/refs/heads/main/output.webp",
                 link: "https://github.com/delmolid/Coffee-Menu.git",
-                technologies: ["HTML", "CSS", "JavaScript"]
+                technologies: ["HTML5", "CSS3", "JavaScript"]
             },
             {
                 title: "Quiz Histoire/Géographique",
@@ -90,30 +95,31 @@ class Portfolio extends React.Component {
 
         const skills = {
             frontend: [
+                { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+                { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+                { name: "Tailwind CSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-wordmark.svg" },
                 { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
                 { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-                { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-                { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-                { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-                { name: "Tailwind CSS", icon: "https://cdn.worldvectorlogo.com/logos/tailwind-css-wordmark.svg" }
+                { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
             ],
             backend: [
-                { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-                { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-                { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
-                { name: "Symfony", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" },
+                { name: "Golang", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" },
+                { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
                 { name: "Spring Boot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" },
-                { name: "JAVA", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" }
+                { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+                { name: "Symfony", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg" }
             ],
             database: [
-                { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-                { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
+                { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+                { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
             ],
             tools: [
                 { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
                 { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
-                { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-                { name: "Figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" }
+                { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+                { name: "Kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
+                { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" }
             ]
         };
 
@@ -256,4 +262,4 @@ class Portfolio extends React.Component {
     }
 }
 
-export default Portfolio; 
+export default Portfolio;
