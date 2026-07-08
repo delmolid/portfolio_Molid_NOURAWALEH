@@ -83,7 +83,7 @@ const Profile = () => {
                         </div>
                         <div className="md:w-1/2 flex justify-center">
                             <img
-                                src="https://raw.githubusercontent.com/delmolid/portfolio_Molid_NOURAWALEH/7a7254304d429f547aeb450d9a8dcb2b7e79ca28/assets/Image%20CV%20-%20Moyenne_preview_rev_1.JPG"
+                                src="https://raw.githubusercontent.com/delmolid/portfolio_Molid_NOURAWALEH/refs/heads/main/assets/Image%20CV%20-%20Moyenne_preview_rev_1.JPG"
                                 alt="Molid NOUR AWALEH"
                                 className="rounded-full w-64 h-64 object-cover shadow-xl"
                             />
@@ -116,7 +116,7 @@ const Profile = () => {
                 }
             >
                 <iframe
-                    src="/CV_MolidNourAwaleh_v4.3.pdf"
+                    src="https://github.com/delmolid/portfolio_Molid_NOURAWALEH/blob/main/public/CV_MolidNourAwaleh_v4.2.pdf"
                     className="w-full"
                     style={{ height: '70vh' }}
                     title="CV Preview"

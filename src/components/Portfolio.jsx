@@ -10,8 +10,8 @@ class Portfolio extends React.Component {
              {
                 title : "Application web d'échange de compétences : TrocSkill-hub",
                 description: "Projet de fin d'études RNCP VI : Application web d'échange de compétences entre particuliers.",
-                image: "https://github.com/delmolid/TrocSkillHub_Front-end",
-                link: "https://github.com/delmolid/TrocSkillHub_Front-end",
+                image: "/Users/khadiraomarhadji/Desktop/Applications ADA /portfolio_Molid_NOURAWALEH/assets/logo trocskillhub.png",
+                link: "https://trocskillhub.ovh",
                 technologies: ["React", "TypeScript", "JAVA", "SpringBoot", "PostgreSQL", "Figma"]
             },
             {
