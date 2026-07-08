@@ -7,10 +7,10 @@ const Header = () => {
     const { openContactForm } = useContext(ContactContext);
     
     const handleDownloadCV = () => {
-        const cvPath = '/CV_MolidNourAwaleh_v4.3.pdf';
+        const cvPath = '/CV_MolidNourAwaleh_Developpeur_v6_2.pdf';
         const link = document.createElement('a');
         link.href = cvPath;
-        link.download = 'CV_MolidNourAwaleh_v4.3.pdf';
+        link.download = 'CV_MolidNourAwaleh_Developpeur_v6_2.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

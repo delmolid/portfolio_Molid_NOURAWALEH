@@ -4,15 +4,16 @@ import { Button } from 'primereact/button';
 import { Dialog } from 'primereact/dialog';
 import { ContactContext } from '../context/ContactContext';
 
+const CV_PATH = '/CV_MolidNourAwaleh_Developpeur_v6_2.pdf';
+
 const Profile = () => {
     const context = useContext(ContactContext);
     const [isPreviewOpen, setIsPreviewOpen] = useState(false);
 
     const handleDownloadCV = () => {
-        const cvPath = '/CV_MolidNourAwaleh_v4.3.pdf';
         const link = document.createElement('a');
-        link.href = cvPath;
-        link.download = 'CV_MolidNourAwaleh_v4.3.pdf';
+        link.href = CV_PATH;
+        link.download = 'CV_MolidNourAwaleh_Developpeur_v6_2.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -116,7 +117,7 @@ const Profile = () => {
                 }
             >
                 <iframe
-                    src="https://github.com/delmolid/portfolio_Molid_NOURAWALEH/blob/main/public/CV_MolidNourAwaleh_v4.2.pdf"
+                    src={CV_PATH}
                     className="w-full"
                     style={{ height: '70vh' }}
                     title="CV Preview"
